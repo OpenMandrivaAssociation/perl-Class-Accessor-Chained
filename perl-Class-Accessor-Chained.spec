@@ -13,6 +13,7 @@ BuildRequires:	perl-devel, perl-Class-Accessor
 # being added, so here it is
 Requires:	perl-Class-Accessor
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 A chained accessor is one that always returns the object when called
