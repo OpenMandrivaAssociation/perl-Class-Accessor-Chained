@@ -1,15 +1,13 @@
 %define upstream_name Class-Accessor-Chained
-%define upstream_version 0.01
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	0.01
+Release:	6
 
 Summary:	Class-Accessor-Chained module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/%{upstream_name}-%{upstream_version}.tar.bz2
+URL:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/%{upstream_name}-%{version}.tar.bz2
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -28,7 +26,7 @@ This module subclasses Class::Accessor in order to provide the same
 mk_accessors interface.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -52,9 +50,7 @@ make test
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.10.0-1mdv2011.0
 + Revision: 402217
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.01-4mdv2009.0
+- rebuild using %0.01 Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.01-4mdv2009.0
 + Revision: 241170
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
